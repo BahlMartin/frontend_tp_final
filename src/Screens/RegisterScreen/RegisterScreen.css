@@ -1,0 +1,279 @@
+/* Contenedor principal */
+.register-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Caja de registro central */
+.register-screen__container {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Logo */
+.register-screen__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.register-screen__logo {
+    width: 32px;
+    height: 32px;
+}
+
+.register-screen__logo-text {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+    color: #1d1c1d;
+}
+
+/* Encabezados */
+.register-screen__heading {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 42px;
+    margin: 0 0 10px 0;
+    color: #1d1c1d;
+}
+
+.register-screen__subheading {
+    font-size: 15px;
+    color: #454545;
+    margin: 0 0 30px 0;
+    line-height: 22px;
+}
+
+.register-screen__subheading strong {
+    color: #1d1c1d;
+}
+
+/* Formulario */
+.register-screen__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Fila para Nombre y Apellido */
+.register-screen__row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.register-screen__input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+}
+
+.register-screen__label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d1c1d;
+}
+
+.register-screen__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 15px;
+    border: 1px solid #868686;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.register-screen__input:focus {
+    border-color: #1264a3;
+    box-shadow: 0 0 0 3px rgba(18, 100, 163, 0.25);
+}
+
+/* Botones */
+.register-screen__submit-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #4a154b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.register-screen__submit-btn:hover {
+    background-color: #5c1b5d;
+}
+
+.register-screen__submit-btn:active {
+    transform: scale(0.98);
+}
+
+.register-screen__submit-btn:disabled {
+    background-color: #dddddd;
+    color: #888888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.register-screen__submit-btn--success {
+    margin-top: 15px;
+    background-color: #2eb67d;
+}
+
+.register-screen__submit-btn--success:hover {
+    background-color: #229665;
+}
+
+/* Mensajes */
+.register-screen__error-msg {
+    width: 100%;
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 1px solid #fad2cf;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 13px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.register-screen__success-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.register-screen__success-icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+/* Links */
+.register-screen__links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #616061;
+}
+
+.register-screen__link {
+    color: #1264a3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-screen__link:hover {
+    text-decoration: underline;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-7px); }
+}
+
+.register-screen__password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.register-screen__password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #1264a3;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.15s ease;
+}
+
+.register-screen__password-toggle:hover {
+    color: #0b4c8c;
+    text-decoration: underline;
+}
+
+.register-screen__input--password {
+    padding-right: 65px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* 320px a 480px (Dispositivos pequeños - Mobile portrait) */
+@media (min-width: 320px) and (max-width: 480px) {
+    .register-screen {
+        padding: 16px;
+    }
+    .register-screen__heading {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .register-screen__row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .register-screen__input {
+        height: 38px;
+    }
+}
+
+/* 480px a 760px (Tablets chicas - Mobile landscape) */
+@media (min-width: 481px) and (max-width: 760px) {
+    .register-screen__heading {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+/* 760px a 1024px (Tablets / Laptops chicas) */
+@media (min-width: 761px) and (max-width: 1024px) {
+    .register-screen__container {
+        max-width: 480px;
+    }
+}
+
+/* 1200px a 2000px (Escritorios grandes) */
+@media (min-width: 1201px) and (max-width: 2000px) {
+    .register-screen {
+        background-color: #f8f8f8;
+    }
+    .register-screen__container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        max-width: 520px;
+    }
+}

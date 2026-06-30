@@ -1,0 +1,324 @@
+/* Contenedor principal de la pantalla */
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Caja de login centralizada */
+.login-screen__container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor del logo */
+.login-screen__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    user-select: none;
+}
+
+.login-screen__logo {
+    width: 32px;
+    height: 32px;
+}
+
+.login-screen__title {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.8px;
+    color: #1d1c1d;
+}
+
+/* Encabezados */
+.login-screen__heading {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    line-height: 46px;
+    margin: 0 0 10px 0;
+    color: #1d1c1d;
+}
+
+.login-screen__subheading {
+    font-size: 15px;
+    color: #454545;
+    margin: 0 0 35px 0;
+    line-height: 22px;
+}
+
+.login-screen__subheading strong {
+    color: #1d1c1d;
+}
+
+/* Formulario */
+.login-screen__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-screen__input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+.login-screen__label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d1c1d;
+}
+
+.login-screen__input {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    font-size: 16px;
+    border: 1px solid #868686;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-screen__input:focus {
+    border-color: #1264a3;
+    box-shadow: 0 0 0 3px rgba(18, 100, 163, 0.25);
+}
+
+.login-screen__input--code {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 6px;
+    font-weight: 700;
+}
+
+/* Botones */
+.login-screen__submit-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #4a154b;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-screen__submit-btn:hover {
+    background-color: #5c1b5d;
+}
+
+.login-screen__submit-btn:active {
+    transform: scale(0.98);
+}
+
+.login-screen__submit-btn:disabled {
+    background-color: #dddddd;
+    color: #888888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-screen__cancel-btn {
+    background: none;
+    border: none;
+    color: #1264a3;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.login-screen__cancel-btn:hover {
+    color: #0b4c8c;
+}
+
+/* Mensaje de error */
+.login-screen__error-msg {
+    width: 100%;
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 1px solid #fad2cf;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Links */
+.login-screen__links {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: #616061;
+}
+
+.login-screen__link {
+    color: #1264a3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-screen__link:hover {
+    text-decoration: underline;
+}
+
+.login-screen__link--forgot {
+    margin-top: 10px;
+}
+
+.login-screen__email-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin-bottom: 24px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.login-screen__email-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d1c1d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.login-screen__change-link {
+    background: none;
+    border: none;
+    color: #1264a3;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.login-screen__change-link:hover {
+    color: #0b4c8c;
+    text-decoration: underline;
+}
+
+.login-screen__password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.login-screen__password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #616061;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    border-radius: 4px;
+}
+
+.login-screen__password-toggle:hover {
+    color: #1d1c1d;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.login-screen__input--password {
+    padding-right: 65px;
+}
+
+/* RESPONSIVE DESIGN - BREAKPOINTS */
+
+/* 320px a 480px (Dispositivos pequeños - Mobile portrait) */
+@media (min-width: 320px) and (max-width: 480px) {
+    .login-screen {
+        padding: 16px;
+    }
+    .login-screen__heading {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .login-screen__subheading {
+        margin-bottom: 25px;
+    }
+    .login-screen__input {
+        font-size: 15px;
+        height: 40px;
+    }
+    .login-screen__submit-btn {
+        font-size: 16px;
+        height: 40px;
+    }
+}
+
+/* 480px a 760px (Tablets chicas - Mobile landscape) */
+@media (min-width: 481px) and (max-width: 760px) {
+    .login-screen__heading {
+        font-size: 34px;
+        line-height: 40px;
+    }
+}
+
+/* 760px a 1024px (Tablets / Laptops chicas) */
+@media (min-width: 761px) and (max-width: 1024px) {
+    .login-screen__container {
+        max-width: 440px;
+    }
+}
+
+/* 1024px a 1200px (Laptops / Pantallas estándar) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .login-screen__container {
+        max-width: 460px;
+    }
+}
+
+/* 1200px a 2000px (Escritorio grande / Ultra-wide) */
+@media (min-width: 1201px) and (max-width: 2000px) {
+    .login-screen {
+        background-color: #f8f8f8;
+    }
+    .login-screen__container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        max-width: 480px;
+    }
+}
