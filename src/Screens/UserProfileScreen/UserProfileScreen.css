@@ -124,109 +124,6 @@
     margin: 0;
 }
 
-/* FORMULARIO */
-.user-profile__form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.user-profile__row {
-    display: flex;
-    gap: 20px;
-}
-
-.user-profile__input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    width: 100%;
-}
-
-.user-profile__label {
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.user-profile__input {
-    width: 100%;
-    height: 38px;
-    padding: 0 12px;
-    font-size: 15px;
-    border: 1px solid #868686;
-    border-radius: 4px;
-    outline: none;
-    box-sizing: border-box;
-}
-
-.user-profile__input:focus {
-    border-color: #1264a3;
-}
-
-/* Mensajes */
-.user-profile__success {
-    background-color: #e2f5ec;
-    color: #229665;
-    border: 1px solid #a8e3c6;
-    border-radius: 4px;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.user-profile__error {
-    background-color: #fce8e6;
-    color: #c5221f;
-    border: 1px solid #fad2cf;
-    border-radius: 4px;
-    padding: 12px;
-    font-size: 14px;
-}
-
-/* ACCIONES */
-.user-profile__actions {
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
-    margin-top: 10px;
-}
-
-.user-profile__btn {
-    height: 40px;
-    padding: 0 18px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.15s ease;
-}
-
-.user-profile__btn--cancel {
-    background-color: #ffffff;
-    border: 1px solid #c5c5c5;
-    color: #454545;
-}
-
-.user-profile__btn--cancel:hover {
-    background-color: #f8f8f8;
-}
-
-.user-profile__btn--submit {
-    background-color: #2eb67d;
-    color: #ffffff;
-    border: none;
-}
-
-.user-profile__btn--submit:hover {
-    background-color: #229665;
-}
-
-.user-profile__btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
 /* RESPONSIVE DESIGN */
 @media (max-width: 480px) {
     .user-profile__header {
@@ -235,21 +132,10 @@
     .user-profile__card {
         padding: 20px;
     }
-    .user-profile__row {
-        flex-direction: column;
-        gap: 20px;
-    }
     .user-profile__avatar-container {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-    }
-    .user-profile__actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .user-profile__btn {
-        width: 100%;
     }
 }
 @media (min-width: 481px) and (max-width: 760px) {
@@ -260,3 +146,4 @@
         padding: 30px;
     }
 }
+

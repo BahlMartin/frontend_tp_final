@@ -1,0 +1,11 @@
+.eye-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: currentColor;
+    transition: transform 0.1s ease;
+}
+
+.eye-icon:active {
+    transform: scale(0.9);
+}

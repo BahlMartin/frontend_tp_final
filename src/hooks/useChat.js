@@ -59,7 +59,7 @@ function useChat(channelId) {
         return () => clearInterval(interval)
     }, [channelId, pollMessages])
 
-    const sendMessage = async (content) => {
+    const sendMessage = useCallback(async (content) => {
         if (!channelId) return
         try {
             const res = await createMessage(channelId, content)
@@ -72,9 +72,9 @@ function useChat(channelId) {
             console.error("Error al enviar mensaje:", err)
             throw err
         }
-    }
+    }, [channelId])
 
-    const editMessage = async (messageId, newContent) => {
+    const editMessage = useCallback(async (messageId, newContent) => {
         try {
             const res = await updateMessage(messageId, newContent)
             if (res.ok && res.data) {
@@ -89,9 +89,9 @@ function useChat(channelId) {
             console.error("Error al editar mensaje:", err)
             throw err
         }
-    }
+    }, [])
 
-    const removeMessage = async (messageId) => {
+    const removeMessage = useCallback(async (messageId) => {
         try {
             const res = await deleteMessage(messageId)
             if (res.ok) {
@@ -101,7 +101,7 @@ function useChat(channelId) {
             console.error("Error al eliminar mensaje:", err)
             throw err
         }
-    }
+    }, [])
 
     const loadMore = useCallback(async () => {
         if (!channelId || loading || !pagination || !pagination.has_next_page) return

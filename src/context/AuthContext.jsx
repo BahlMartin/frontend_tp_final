@@ -7,7 +7,7 @@ export const AuthContext = createContext({
     userData: null,
     login: () => { },
     logout: () => { },
-    refreshUser: () => { }
+    refreshUser: async () => { }
 })
 
 export const AUTH_TOKEN_LOCALSTORAGE_KEY = 'auth_token'

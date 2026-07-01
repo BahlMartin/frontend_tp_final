@@ -15,7 +15,7 @@ import ChannelScreen from './Screens/ChannelScreen/ChannelScreen'
 import UserProfileScreen from './Screens/UserProfileScreen/UserProfileScreen'
 import NotFoundScreen from './Screens/NotFoundScreen/NotFoundScreen'
 import InvitationScreen from './Screens/InvitationScreen/InvitationScreen'
-import WorkspaceWelcome from './Screens/WorkspaceScreen/WorkspaceWelcome'
+import WorkspaceWelcome from './components/WorkspaceWelcome/WorkspaceWelcome'
 
 
 const App = () => {

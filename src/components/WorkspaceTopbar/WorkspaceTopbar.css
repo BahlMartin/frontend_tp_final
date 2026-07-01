@@ -1,0 +1,129 @@
+.workspace-topbar {
+    height: 40px;
+    background-color: #350d36; /* Morado oscuro de Slack */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 100;
+    color: #ffffff;
+}
+
+.workspace-topbar__menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.workspace-topbar__menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.workspace-topbar__spacer {
+    flex: 1;
+}
+
+.workspace-topbar__user {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.workspace-topbar__avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #e01e5a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease;
+}
+
+.workspace-topbar__avatar:hover {
+    transform: scale(1.05);
+}
+
+/* Dropdown Perfil */
+.workspace-topbar__profile-dropdown {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+    z-index: 1000;
+    color: #1d1c1d;
+}
+
+.workspace-topbar__dropdown-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.workspace-topbar__dropdown-name {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.workspace-topbar__dropdown-email {
+    font-size: 12px;
+    color: #616061;
+    word-break: break-all;
+}
+
+.workspace-topbar__dropdown-item {
+    padding: 10px 16px;
+    font-size: 14px;
+    text-align: left;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: #1d1c1d;
+    box-sizing: border-box;
+}
+
+.workspace-topbar__dropdown-item:hover {
+    background-color: #f8f8f8;
+}
+
+.workspace-topbar__dropdown-item--logout {
+    color: #c5221f;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 4px;
+}
+
+/* RESPONSIVE DESIGN - BREAKPOINTS */
+@media (max-width: 760px) {
+    .workspace-topbar__menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+    .workspace-topbar__menu-toggle {
+        display: block;
+    }
+}

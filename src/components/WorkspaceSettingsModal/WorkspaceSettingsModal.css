@@ -1,0 +1,142 @@
+.workspace-settings-modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    padding: 20px;
+}
+
+.workspace-settings-modal__box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: left;
+}
+
+.workspace-settings-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.workspace-settings-modal__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.workspace-settings-modal__close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #616061;
+}
+
+.workspace-settings-modal__form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.workspace-settings-modal__input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+}
+
+.workspace-settings-modal__label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.workspace-settings-modal__input {
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    font-size: 15px;
+    border: 1px solid #868686;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.workspace-settings-modal__input:focus {
+    border-color: #1264a3;
+}
+
+.workspace-settings-modal__input--textarea {
+    height: auto;
+    min-height: 80px;
+    padding: 10px 12px;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+.workspace-settings-modal__error {
+    color: #c5221f;
+    background-color: #fce8e6;
+    border: 1px solid #fad2cf;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.workspace-settings-modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.workspace-settings-modal__btn {
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.workspace-settings-modal__btn--cancel {
+    background-color: #ffffff;
+    border: 1px solid #c5c5c5;
+    color: #454545;
+}
+
+.workspace-settings-modal__btn--submit {
+    background-color: #2eb67d;
+    color: #ffffff;
+    border: none;
+}
+
+.workspace-settings-modal__btn--submit:hover {
+    background-color: #229665;
+}
+
+.workspace-settings-modal__btn--danger {
+    margin-right: auto;
+    background-color: #e01e5a;
+    color: #ffffff;
+    border: none;
+}
+
+.workspace-settings-modal__btn--danger:hover {
+    background-color: #c0194c;
+}

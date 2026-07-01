@@ -1,0 +1,91 @@
+.message-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.message-list__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    color: #616061;
+}
+
+.message-list__spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #4a154b;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.message-list__welcome {
+    padding: 40px 20px;
+    text-align: left;
+    max-width: 600px;
+}
+
+.message-list__welcome-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.message-list__welcome-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    color: #1d1c1d;
+}
+
+.message-list__welcome-text {
+    font-size: 14px;
+    color: #616061;
+    margin: 0;
+    line-height: 20px;
+}
+
+/* PAGINACION - CARGAR MAS MENSAJES */
+.message-list__load-more-container {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #e2e2e2;
+}
+
+.message-list__load-more-btn {
+    background-color: #f8f8f8;
+    border: 1px solid #c5c5c5;
+    color: #4a154b;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.message-list__load-more-btn:hover:not(:disabled) {
+    background-color: #4a154b;
+    color: #ffffff;
+    border-color: #4a154b;
+}
+
+.message-list__load-more-btn:disabled {
+    background-color: #f3f3f3;
+    color: #c5c5c5;
+    border-color: #e2e2e2;
+    cursor: not-allowed;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
