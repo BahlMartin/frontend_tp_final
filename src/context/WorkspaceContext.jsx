@@ -122,7 +122,7 @@ export const WorkspaceContextProvider = () => {
 
         const interval = setInterval(() => {
             pollWorkspaceDetails(workspaceId)
-        }, 5000) // Consultar cada 5 segundos
+        }, 30000) // Consultar cada 30 segundos
 
         return () => clearInterval(interval)
     }, [workspaceId, pollWorkspaceDetails])

@@ -54,7 +54,7 @@ function useChat(channelId) {
 
         const interval = setInterval(() => {
             pollMessages(channelId)
-        }, 4000) // Consultar cada 4 segundos
+        }, 15000) // Consultar cada 15 segundos
 
         return () => clearInterval(interval)
     }, [channelId, pollMessages])

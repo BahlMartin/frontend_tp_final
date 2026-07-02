@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import EyeIcon from '../EyeIcon/EyeIcon.jsx'
 import './RegisterForm.css'
 
 export const RegisterForm = ({ form, showPassword, toggleShowPassword, loading, error }) => {
@@ -86,8 +87,9 @@ export const RegisterForm = ({ form, showPassword, toggleShowPassword, loading, 
                             type="button"
                             className="register-form__password-toggle"
                             onClick={toggleShowPassword}
+                            aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
                         >
-                            {showPassword ? 'Ocultar' : 'Mostrar'}
+                            <EyeIcon showCrossed={showPassword} className="register-form__eye-icon" />
                         </button>
                     </div>
                 </div>

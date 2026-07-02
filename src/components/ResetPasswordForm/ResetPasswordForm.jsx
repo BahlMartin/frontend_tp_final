@@ -1,4 +1,5 @@
 import React from 'react'
+import EyeIcon from '../EyeIcon/EyeIcon.jsx'
 import './ResetPasswordForm.css'
 
 export const ResetPasswordForm = ({
@@ -33,8 +34,9 @@ export const ResetPasswordForm = ({
                         type="button"
                         className="reset-password-form__password-toggle"
                         onClick={toggleShowPassword}
+                        aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
                     >
-                        {showPassword ? 'Ocultar' : 'Mostrar'}
+                        <EyeIcon showCrossed={showPassword} className="reset-password-form__eye-icon" />
                     </button>
                 </div>
             </div>
@@ -56,8 +58,9 @@ export const ResetPasswordForm = ({
                         type="button"
                         className="reset-password-form__password-toggle"
                         onClick={toggleShowConfirmPassword}
+                        aria-label={showConfirmPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
                     >
-                        {showConfirmPassword ? 'Ocultar' : 'Mostrar'}
+                        <EyeIcon showCrossed={showConfirmPassword} className="reset-password-form__eye-icon" />
                     </button>
                 </div>
             </div>
@@ -80,3 +83,4 @@ export const ResetPasswordForm = ({
 )
 
 export default ResetPasswordForm
+

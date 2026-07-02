@@ -4,7 +4,7 @@ import './TwoFAStep.css'
 export const TwoFAStep = ({ form, email, loading, error, goBackToEmail }) => {
     return (
         <>
-            <h2 className="login-screen__heading">Introduce el código 2FA</h2>
+            <h2 className="login-screen__heading">Introduce el código</h2>
             <p className="login-screen__subheading">Hemos enviado un código temporal de 6 dígitos a <strong>{email}</strong>.</p>
 
             <form className="login-screen__form" onSubmit={form.handleSubmit}>

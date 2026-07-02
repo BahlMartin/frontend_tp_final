@@ -56,17 +56,19 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #1264a3;
-    font-size: 13px;
-    font-weight: 600;
+    color: #616061;
     cursor: pointer;
-    padding: 0;
-    transition: color 0.15s ease;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    border-radius: 4px;
 }
 
 .register-form__password-toggle:hover {
-    color: #0b4c8c;
-    text-decoration: underline;
+    color: #1d1c1d;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .register-form__input--password {

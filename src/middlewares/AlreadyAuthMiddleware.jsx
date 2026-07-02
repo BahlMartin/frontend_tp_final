@@ -8,6 +8,10 @@ function AlreadyAuthMiddleware() {
     if (!isLogged) {
         return <Outlet />
     } else {
+        const pendingInvitation = sessionStorage.getItem('pendingInvitation')
+        if (pendingInvitation) {
+            return <Navigate to={pendingInvitation} replace />
+        }
         return <Navigate to="/home" replace />
     }
 }

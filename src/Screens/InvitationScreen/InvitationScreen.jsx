@@ -1,14 +1,21 @@
+import { useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router'
 import useInvitation from '../../hooks/useInvitation.js'
+import useAuth from '../../hooks/useAuth.js'
 import Logo from '../../components/Logo/Logo.jsx'
 import './InvitationScreen.css'
 
 export const InvitationScreen = () => {
     const { invitationId, decision } = useParams()
     const navigate = useNavigate()
+    const { isLogged } = useAuth()
+
+    useEffect(() => {
+        sessionStorage.removeItem('pendingInvitation')
+    }, [])
 
     // hook para la logica de invitacion 
-    const { loading, error, successMessage, workspaceId } = useInvitation(invitationId, decision)
+    const { loading, error, successMessage, workspaceId } = useInvitation(invitationId, decision, isLogged)
 
     const handleContinue = () => {
         if (decision === 'accepted' && workspaceId) {

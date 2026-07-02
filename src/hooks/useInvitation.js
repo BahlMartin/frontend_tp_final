@@ -3,7 +3,7 @@ import { respondInvitation } from '../services/workspaceService.js'
 
 const VALID_DECISIONS = ['accepted', 'rejected']
 
-export function useInvitation(invitationId, decision) {
+export function useInvitation(invitationId, decision, enabled = true) {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const [successMessage, setSuccessMessage] = useState('')
@@ -11,6 +11,8 @@ export function useInvitation(invitationId, decision) {
     const hasAttempted = useRef(false)
 
     useEffect(() => {
+        if (!enabled) return
+
         // 1. Validación temprana del ID de la invitación
         if (!invitationId) {
             setError('El ID de la invitación es requerido.')
@@ -48,7 +50,7 @@ export function useInvitation(invitationId, decision) {
                     setError(err.message || 'Ocurrió un error inesperado al procesar la invitación')
                 })
         }
-    }, [invitationId, decision])
+    }, [invitationId, decision, enabled])
 
     return {
         loading,

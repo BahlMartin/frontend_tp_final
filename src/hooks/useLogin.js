@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import useRequest from './useRequest.js'
-import useAuth from './useAuth.js   '
+import useAuth from './useAuth.js'
 import useForm from './useForm.js'
 import { checkEmail as apiCheckEmail, login as apiLogin, verify2FA as apiVerify2FA } from '../services/authService.js'
 
@@ -37,8 +37,11 @@ export function useLogin() {
                 clearStates()
                 const res = await sendRequest(() => apiVerify2FA(email, formData.code))
                 if (res?.ok && res?.data?.access_token) {
+                    const pendingInvitation = sessionStorage.getItem('pendingInvitation')
                     syncLogin(res.data.access_token)
-                    navigate('/home')
+                    if (!pendingInvitation) {
+                        navigate('/home')
+                    }
                 }
             } catch (err) {
                 console.error("Error al verificar código 2FA:", err)
