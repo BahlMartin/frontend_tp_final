@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+import { Modal } from '../Modal/Modal.jsx'
 import './ChannelHeader.css'
 
 export const ChannelHeader = ({
@@ -8,6 +10,8 @@ export const ChannelHeader = ({
     onOpenSettings,
     onOpenMembers
 }) => {
+    const [showDetails, setShowDetails] = useState(false)
+
     return (
         <div className="channel-header">
             <div className="channel-header__info">
@@ -35,12 +39,35 @@ export const ChannelHeader = ({
                         👤 {memberCount} miembros
                     </span>
                     {description && (
-                        <span className="channel-header__desc">
+                        <span 
+                            className="channel-header__desc"
+                            onClick={() => setShowDetails(true)}
+                            title="Ver descripción completa"
+                        >
                             | {description}
                         </span>
                     )}
                 </div>
             </div>
+
+            {showDetails && (
+                <Modal title={`Acerca de #${channelName}`} onClose={() => setShowDetails(false)}>
+                    <div className="channel-details-modal">
+                        <div className="channel-details-modal__section">
+                            <h4 className="channel-details-modal__section-title">Descripción</h4>
+                            <div className="channel-details-modal__content-box">
+                                <p className="channel-details-modal__text">{description}</p>
+                            </div>
+                        </div>
+                        <div className="channel-details-modal__section">
+                            <h4 className="channel-details-modal__section-title">Información adicional</h4>
+                            <p className="channel-details-modal__text">
+                                Canal de comunicación con <strong>{memberCount} miembros</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </Modal>
+            )}
         </div>
     )
 }

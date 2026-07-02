@@ -140,3 +140,24 @@
 .workspace-settings-modal__btn--danger:hover {
     background-color: #c0194c;
 }
+
+@media (max-width: 400px) {
+    .workspace-settings-modal__actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .workspace-settings-modal__btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .workspace-settings-modal__btn--submit {
+        order: 1;
+    }
+    .workspace-settings-modal__btn--cancel {
+        order: 2;
+    }
+    .workspace-settings-modal__btn--danger {
+        order: 3;
+        margin-top: 8px;
+    }
+}

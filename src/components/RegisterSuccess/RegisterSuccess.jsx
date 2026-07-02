@@ -11,6 +11,9 @@ export const RegisterSuccess = ({ registeredEmail }) => {
                 Hemos enviado un enlace de verificación a <strong>{registeredEmail}</strong>.<br />
                 Por favor, revisa tu casilla de correo y haz clic en el botón para activar tu cuenta.
             </p>
+            <p className="register-success__spam-warning">
+                ¿No encuentras el correo? Recuerda revisar tu bandeja de correo no deseado o spam.
+            </p>
             <Link to="/login" className="register-success__submit-btn">
                 Ir a Iniciar Sesión
             </Link>

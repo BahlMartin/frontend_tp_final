@@ -1,55 +1,3 @@
-.edit-channel-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.edit-channel-modal__box {
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 480px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    animation: editChannelModalFadeIn 0.15s ease-out;
-}
-
-.edit-channel-modal__header {
-    padding: 20px 24px 15px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.edit-channel-modal__title {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 800;
-    color: #1d1c1d;
-}
-
-.edit-channel-modal__close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #616061;
-}
-
-.edit-channel-modal__close:hover {
-    color: #1d1c1d;
-}
-
 .edit-channel-modal__form {
     padding: 20px 24px;
 }
@@ -168,7 +116,23 @@
     cursor: not-allowed;
 }
 
-@keyframes editChannelModalFadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+@media (max-width: 400px) {
+    .edit-channel-modal__actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .edit-channel-modal__btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    .edit-channel-modal__btn--submit {
+        order: 1;
+    }
+    .edit-channel-modal__btn--cancel {
+        order: 2;
+    }
+    .edit-channel-modal__btn--danger {
+        order: 3;
+        margin-top: 8px;
+    }
 }

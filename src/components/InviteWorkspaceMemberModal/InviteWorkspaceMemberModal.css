@@ -143,3 +143,17 @@
     color: #616061;
     margin: 0 0 10px 0;
 }
+
+.invite-member-modal__spam-warning {
+    font-size: 13px;
+    color: #616061;
+    background-color: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.45;
+}

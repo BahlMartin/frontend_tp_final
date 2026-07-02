@@ -1,0 +1,103 @@
+.modal-layout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.modal-layout__box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modalFadeIn 0.15s ease-out;
+    box-sizing: border-box;
+}
+
+.modal-layout__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+
+.modal-layout__title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    color: #1d1c1d;
+}
+
+.modal-layout__close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #616061;
+    transition: color 0.15s ease;
+    padding: 0;
+    line-height: 1;
+}
+
+.modal-layout__close-btn:hover {
+    color: #1d1c1d;
+}
+
+.modal-layout__content {
+    box-sizing: border-box;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Breakpoints Responsivos */
+
+/* Mobile Portrait */
+@media (min-width: 320px) and (max-width: 480px) {
+    .modal-layout {
+        padding: 10px;
+    }
+    
+    .modal-layout__box {
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .modal-layout__header {
+        padding: 14px 18px;
+    }
+
+    .modal-layout__title {
+        font-size: 17px;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 480px) and (max-width: 760px) {
+    .modal-layout__box {
+        max-width: 440px;
+    }
+}

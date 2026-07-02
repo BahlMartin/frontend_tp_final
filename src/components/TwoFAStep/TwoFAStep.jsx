@@ -6,6 +6,9 @@ export const TwoFAStep = ({ form, email, loading, error, goBackToEmail }) => {
         <>
             <h2 className="login-screen__heading">Introduce el código</h2>
             <p className="login-screen__subheading">Hemos enviado un código temporal de 6 dígitos a <strong>{email}</strong>.</p>
+            <p className="login-screen__spam-warning">
+                ¿No recibes el código? Recuerda revisar tu bandeja de correo no deseado o spam.
+            </p>
 
             <form className="login-screen__form" onSubmit={form.handleSubmit}>
                 <div className="login-screen__input-group">

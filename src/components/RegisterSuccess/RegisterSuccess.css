@@ -38,6 +38,20 @@
     transform: scale(0.98);
 }
 
+.register-success__spam-warning {
+    font-size: 14px;
+    color: #616061;
+    background-color: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 5px 0 10px 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-15px); }

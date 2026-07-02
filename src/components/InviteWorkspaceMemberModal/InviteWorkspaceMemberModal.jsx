@@ -66,6 +66,9 @@ export const InviteWorkspaceMemberModal = ({ workspaceId, currentWorkspace, onCl
                             <span className="invite-member-modal__success-badge">🎉</span>
                             <h4 className="invite-member-modal__success-title">¡Invitación enviada con éxito!</h4>
                             <p className="invite-member-modal__success-text">Se ha enviado una solicitud a la casilla indicada.</p>
+                            <p className="invite-member-modal__spam-warning">
+                                ¿No encuentra el correo? Recuérdale al colaborador revisar su bandeja de correo no deseado o spam.
+                            </p>
                             <button
                                 className="invite-member-modal__btn invite-member-modal__btn--submit"
                                 type="button"

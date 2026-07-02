@@ -75,6 +75,17 @@
 .channel-header__desc {
     font-size: 12px;
     color: #616061;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.channel-header__desc:hover {
+    color: #1264a3;
+    text-decoration: underline;
 }
 
 /* RESPONSIVE DESIGN - BREAKPOINTS */
@@ -84,7 +95,7 @@
         height: 50px;
     }
     .channel-header__desc {
-        display: none;
+        max-width: 120px;
     }
 }
 
@@ -93,3 +104,43 @@
         padding: 0 16px;
     }
 }
+
+/* Estilos de Detalles del Canal en Modal */
+.channel-details-modal {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.channel-details-modal__section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.channel-details-modal__section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d1c1d;
+    margin: 0;
+}
+
+.channel-details-modal__content-box {
+    background-color: #f8f8f8;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    padding: 12px 16px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.channel-details-modal__text {
+    font-size: 15px;
+    color: #454545;
+    margin: 0;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
