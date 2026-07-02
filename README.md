@@ -108,5 +108,16 @@ VITE_URL_API=http://localhost:8080
 
 ---
 
+## 🔮 Futuras Mejoras
+
+Con el objetivo de enriquecer la experiencia de usuario y expandir las capacidades del cliente de chat, se planifican las siguientes actualizaciones:
+
+- **Indicador de Estado / Presencia en Tiempo Real**: Mostrar visualmente si un usuario miembro se encuentra conectado o desconectado en los paneles laterales y listas de miembros de canal/workspace.
+- **Gestión de Avatar / Foto de Perfil**: Añadir la posibilidad de subir y actualizar una imagen de perfil personalizada desde la pantalla de configuración de usuario.
+- **Compartir Archivos y Multimedia**: Diseñar e implementar componentes de carga de archivos para arrastrar, soltar y previsualizar imágenes o documentos directamente dentro del chat del canal.
+
+---
+
 ## 🌐 Enlace del Despliegue Público
 - **Sitio Web Desplegado**: `https://slucky.vercel.app`
+
