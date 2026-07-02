@@ -109,4 +109,4 @@ VITE_URL_API=http://localhost:8080
 ---
 
 ## 🌐 Enlace del Despliegue Público
-- **Sitio Web Desplegado**: `https://[TU-DOMINIO-DE-VERCEL-O-NETLIFY].vercel.app` (Reemplaza con tu URL real)
+- **Sitio Web Desplegado**: `https://slucky.vercel.app`
